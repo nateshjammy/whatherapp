@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+   <RelativeLayout
+       android:id="@+id/toolbar_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colorPrimaryDark">
+
+
+       <androidx.appcompat.widget.AppCompatEditText
+           android:id="@+id/ed_search"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_toLeftOf="@+id/iv_serchview_btn"
+           android:layout_toStartOf="@+id/iv_serchview_btn"
+           android:maxLines="1"
+           android:hint="Location"
+           android:textColorHint="#80FFFFFF"
+           android:backgroundTint="#FFFFFF"
+           android:textColor="#FFFFFF" />
+
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/iv_serchview_btn"
+           android:layout_width="48dp"
+           android:layout_height="48dp"
+           app:srcCompat="@android:drawable/ic_menu_search"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentRight="true" />
+
+   </RelativeLayout>
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/re_serch"
+       android:layout_below="@+id/toolbar_layout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/appprogressbar"
+        android:layout_width="100dp"
+        android:visibility="visible"
+        tools:visibility="gone"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
