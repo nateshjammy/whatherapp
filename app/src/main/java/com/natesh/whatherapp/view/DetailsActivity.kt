@@ -2,6 +2,7 @@ package com.natesh.whatherapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.lifecycle.Observer
@@ -22,9 +23,9 @@ class DetailsActivity : AppCompatActivity() {
 
         Viewmodel = ViewModelProviders.of(this).get(DetailsActivityViewModel::class.java)
 
-       /* if(intent.hasExtra("name")){
-            tv_locationname.text = intent.getStringExtra("name")
-        }*/
+       if(intent.hasExtra("name")){
+           location_name.text = intent.getStringExtra("name")
+        }
         if(intent.hasExtra("Location")){
             val location = intent.getIntExtra("Location",0)
             if(location > 0)

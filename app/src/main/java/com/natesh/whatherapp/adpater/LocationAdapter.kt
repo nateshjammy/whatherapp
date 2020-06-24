@@ -2,6 +2,7 @@ package com.natesh.whatherapp.adpater
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class LocationAdapter(private val context: Context) :
             val intent  = Intent(context,DetailsActivity::class.java)
             intent.putExtra("Location",list[position].woeid)
             intent.putExtra("name",list[position].title)
+            Log.d("name",""+list[position].title)
             context.startActivity(intent)
         }
     }
