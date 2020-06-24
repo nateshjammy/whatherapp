@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.natesh.whatherapp.R
 import com.natesh.whatherapp.adpater.Itemviewlistnerforitem
 import com.natesh.whatherapp.adpater.LocationAdapter
+import com.natesh.whatherapp.model.Weatherdata
 import com.natesh.whatherapp.viewmodel.MainActivityViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 

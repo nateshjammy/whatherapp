@@ -11,8 +11,6 @@ import com.natesh.whatherapp.repostary.MainRepository
 
 class MainActivityViewModel(application: Application) : AndroidViewModel(application)  {
 
- //  private val context = getApplication<Application>().applicationContext
-
 
     val  repository = MainRepository(application)
 

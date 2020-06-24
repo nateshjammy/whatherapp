@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+         <TextView
+             android:id="@+id/location_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Location"
+             android:textSize="50dp"
+             />
+
+        <TextView
+            android:id="@+id/location_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="30dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/detailspprogressbar"
+        android:layout_width="100dp"
+        android:visibility="visible"
+        tools:visibility="gone"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

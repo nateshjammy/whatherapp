@@ -1,13 +1,16 @@
 package com.natesh.whatherapp.adpater
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.natesh.whatherapp.R
 import com.natesh.whatherapp.model.Weatherdata
+import com.natesh.whatherapp.view.DetailsActivity
 import kotlinx.android.synthetic.main.rv_locationchild.view.*
+import java.util.ArrayList
 
 class LocationAdapter(private val context: Context) :
     RecyclerView.Adapter<LocationAdapter.ViewHolder>() {
@@ -25,16 +28,18 @@ class LocationAdapter(private val context: Context) :
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-
         holder.name.text = list[position].title
         holder.latlong.text = list[position].latt_long
-
         mitemviewListnerforitem?.onItemselected(position)
 
+        holder.roorView.setOnClickListener {
 
+            val intent  = Intent(context,DetailsActivity::class.java)
+            intent.putExtra("Location",list[position].woeid)
+            intent.putExtra("name",list[position].title)
+            context.startActivity(intent)
+        }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
